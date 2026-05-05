@@ -33,11 +33,11 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, onSendMe
   };
 
   return (
-    <div className="flex-1 flex flex-col h-full bg-[#fdfaf5]/50 relative overflow-hidden md:pr-20 md:pb-20">
+    <div className="flex-1 flex flex-col h-full bg-[#fdfaf5]/50 relative overflow-hidden">
       {/* Messages */}
-      <div 
+      <div
         ref={scrollRef}
-        className="flex-1 overflow-y-auto p-4 md:p-8 space-y-6 no-scrollbar scroll-smooth pb-32"
+        className="flex-1 overflow-y-auto pt-10 px-4 md:px-6 pb-4 space-y-6 no-scrollbar scroll-smooth"
       >
         <AnimatePresence mode="popLayout">
           {messages.map((msg, i) => (

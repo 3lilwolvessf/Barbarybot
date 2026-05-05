@@ -42,24 +42,24 @@ export default function App() {
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 h-full w-full gap-4 lg:gap-8">
         
         {/* Top Left: Chat Interface */}
-        <div className="section-card bento-glass bento-mask-tl relative flex flex-col">
-           <div className="absolute top-2 left-0 right-0 z-20 pointer-events-none flex justify-center">
-            <span className="font-display text-[#c5a059] text-xl uppercase tracking-tighter opacity-60">The Wire Despatch</span>
+        <div className="section-card bento-glass bento-mask-tl relative flex flex-col overflow-hidden">
+          <div className="absolute top-3 left-0 right-0 z-20 pointer-events-none flex justify-center">
+            <span className="font-display text-[#c5a059] text-base md:text-xl uppercase tracking-tighter opacity-60">The Wire Despatch</span>
           </div>
-          <ChatInterface 
-            messages={messages} 
-            onSendMessage={handleSendMessage} 
-            isLoading={isLoading} 
+          <ChatInterface
+            messages={messages}
+            onSendMessage={handleSendMessage}
+            isLoading={isLoading}
           />
         </div>
 
         {/* Top Right: Gazette / News */}
-        <div className="section-card bento-glass bento-mask-tr relative flex items-center justify-center p-6 md:pb-20 md:pl-20">
+        <div className="section-card bento-glass bento-mask-tr relative flex items-center justify-center p-6 pb-16 md:pb-24 pl-6 md:pl-24">
           <div className="max-w-md w-full space-y-4 text-center uppercase">
             <div className="space-y-1">
               <div className="text-[10px] opacity-40">Barbary Gazette • April 1906</div>
               <div className="h-px bg-black/10 w-full"></div>
-              <h2 className="text-2xl lg:text-3xl font-display text-[#2c2c2c]">The Golden City</h2>
+              <h2 className="text-xl lg:text-3xl font-display text-[#2c2c2c] leading-tight">The Golden City</h2>
             </div>
             <div className="grid grid-cols-2 gap-4 text-[10px] tracking-widest opacity-80">
               <div className="p-3 border border-black/5 bg-white/20 rounded-2xl">
@@ -78,12 +78,12 @@ export default function App() {
         </div>
 
         {/* Bottom Left: Selfie Gallery */}
-        <div className="section-card bento-glass bento-mask-bl relative flex flex-col pt-12">
+        <div className="section-card bento-glass bento-mask-bl relative flex flex-col pt-6 md:pt-8 overflow-hidden">
           <SelfieGallery />
         </div>
 
         {/* Bottom Right: Map History */}
-        <div className="section-card bento-glass bento-mask-br relative flex flex-col pt-12 overflow-hidden">
+        <div className="section-card bento-glass bento-mask-br relative flex flex-col pt-6 md:pt-8 overflow-hidden">
           <MapViewer onAskAbout={handleAskAbout} />
         </div>
       </div>
