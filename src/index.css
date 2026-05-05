@@ -54,29 +54,6 @@ body {
   color: #c5a059;
 }
 
-.bento-mask-tl {
-  @media (min-width: 768px) {
-    mask-image: radial-gradient(circle at 100% 100%, transparent 80px, black 81px);
-  }
-}
-
-.bento-mask-tr {
-  @media (min-width: 768px) {
-    mask-image: radial-gradient(circle at 0% 100%, transparent 80px, black 81px);
-  }
-}
-
-.bento-mask-bl {
-  @media (min-width: 768px) {
-    mask-image: radial-gradient(circle at 100% 0%, transparent 80px, black 81px);
-  }
-}
-
-.bento-mask-br {
-  @media (min-width: 768px) {
-    mask-image: radial-gradient(circle at 0% 0%, transparent 80px, black 81px);
-  }
-}
 
 .bento-glass {
   background: rgba(255, 255, 255, 0.4);
